@@ -42,7 +42,6 @@ strikeButton.onclick = () => {
   strikeAudio.currentTime = 0;
   strikeAudio.play();
 
-  //generate random strike value
   const randomElement =
     possibleOutcomes[Math.floor(Math.random() * possibleOutcomes.length)];
 
