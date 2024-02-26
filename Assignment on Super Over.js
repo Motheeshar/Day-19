@@ -37,7 +37,6 @@ resetButton.onclick = () => {
 };
 
 strikeButton.onclick = () => {
-  //play audio
   strikeAudio.pause();
   strikeAudio.currentTime = 0;
   strikeAudio.play();
@@ -45,19 +44,18 @@ strikeButton.onclick = () => {
   const randomElement =
     possibleOutcomes[Math.floor(Math.random() * possibleOutcomes.length)];
 
-  //second batting
   if (turn === 2) {
-    //increase ball count
+
     team2BallsFaced++;
-    //update score for the ball
+  
     document.querySelector(
       `#team2-superover div:nth-child(${team2BallsFaced})`
     ).textContent = randomElement;
-    // if wicket, update wickets variable
+ 
     if (randomElement === "W") {
       team2Wickets++;
     }
-    // else update score
+ 
     else {
       team2Score += randomElement;
     }
